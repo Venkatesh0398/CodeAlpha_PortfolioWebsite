@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="Venkatesh_Porfolio.css">
+    
+</head>
+<body>
+   
+    <div id="header">
+        <div class="Container">
+            <div class="nav">
+                <h1><span>V</span>enkatesh.</h1>
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="header-text1">
+                <div class="header-text">
+                    <p>Student</p>
+                    <h1>Hi,I'm <Span>Venkatesh</Span><br> A Student <br>upskilling in WebOps.</h1>
+                </div>
+                <img src="rear.jpg">
+            </div>
+        </div>
+    </div>
+    <!--about-->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="main.jpg">
+                </div>
+                
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hello! I’m Venkatesh, a student constantly working to upgrade my skills in Web Development and Web Designing to build dynamic, user-friendly websites and applications. With a background in Information Technology, I strive towards a high level skill development to create seamless digital experiences that drive engagement and deliver results.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web Development</span><br>HTML<br>CSS<br>JS</li>
+                            <li><span>Data Structures</span><br>C<br>JAVA<br>PYTHON</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2024-current</span><br>Internship on Web Development at CodeAlpha</li>
+                            <li><span>2024</span><br>Bootcamp on HTML & CSS at DevTown.</li>
+                            <li><span>2024</span><br>Bootcamp on python & AI at DevTown.</li>
+                            <li><span>2022-2023</span><br>Industrial Training at SVGS,Hyderabad.</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2024-26(current)</span><br>Pursuing my B.Tech at KITS,Warangal.</li>
+                            <li><span>2023</span><br>Diploma from JNGP,Ramanthapur.</li>
+                            <li><span>2020</span><br>High School from KTS,Hyderabad.</li>
+                        </ul>  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--projects-->
+    <div id="projects">
+        <div class="container">
+            <h1 class="sub-title">Projects</h1>
+            <div class="projects-list">
+                <div>
+                    <i class="fa-solid fa-user"></i>
+                    <h2>Personal Portfolio</h2>
+                    <p>Created my Personal Portfolio Website using HTML, CSS & JS. </p>
+                    <a href="#">Learn more</a>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Expense Tracker</h2>
+                    <p>Created an Expense Tracker using HTML, CSS & JS.</p>
+                    <a href="#">Learn more</a>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-bolt"></i>
+                    <h2>Electric Weeder</h2>
+                    <p>I have used the concepts of Electrical and Arduino to design a weeder as my mini project in my Diploma.</p>
+                    <a href="#">Learn more</a>
+                    </div>
+
+                <div>
+                    <i class="fa-brands fa-amazon"></i>
+                    <h2>Amazon Clone</h2>
+                    <p>Created the Amazon Clone using HTML, CSS & JS.</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Contact details-->
+    <div id="Contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-regular fa-envelope"></i>venky2005pc@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>8143335257</p>
+                    <a href="" download class="btn">Download Resume</a>
+                    <div class="social-icons">
+                        <a href="https://facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter-square"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    
+                </div>
+                
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+        function opentab(tabname)
+        {
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+        
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script src="https://kit.fontawesome.com/857fbf90f7.js" crossorigin="anonymous"></script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzj92qW2i6KPKAFO6StK5RxlsAIes3jUjXeB9IHWkjP1zah1xFWlCXu8Qx24U0zB5Ux6A/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerText = "Message sent successfully!";
+                setTimeout(function(){
+                    msg.innerText = "";
+                },5000)
+                form.reset();
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+</html>
